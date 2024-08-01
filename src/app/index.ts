@@ -1,10 +1,10 @@
-import 'dotenv/config';
-import fastify from 'fastify';
-import helmet from '@fastify/helmet';
-import cors from '@fastify/cors';
+import "dotenv/config";
+import fastify from "fastify";
+import helmet from "@fastify/helmet";
+import cors from "@fastify/cors";
 
-import { errorMiddleware } from '@/middleware/error-middleware';
-import { appRoutes } from '@/modules/app-routes';
+import { errorMiddleware } from "@/middleware/error-middleware";
+import { appRoutes } from "@/modules/app-routes";
 
 const app = fastify();
 

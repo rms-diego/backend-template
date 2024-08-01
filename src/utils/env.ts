@@ -1,13 +1,13 @@
-import { z as zod } from 'zod';
+import { z as zod } from "zod";
 
 const environmentVariablesSchema = zod.object({
   PORT: zod.coerce.number().default(3333),
 });
 
-const _env = environmentVariablesSchema.safeParse(process.env);
+const isValidEnv = environmentVariablesSchema.safeParse(process.env);
 
-if (!_env.success) {
-  throw new Error('environments variable must be declare');
+if (!isValidEnv.success) {
+  throw new Error("environments variable must be declare");
 }
 
-export const env = _env.data;
+export const env = isValidEnv.data;
