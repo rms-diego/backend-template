@@ -14,6 +14,8 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "@typescript-eslint/no-throw-literal": "off",
+    "consistent-return": "off",
     "import/no-extraneous-dependencies": "off",
     "no-console": "off",
     "@typescript-eslint/lines-between-class-members": "off",
