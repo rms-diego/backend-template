@@ -1,8 +1,12 @@
 import { app } from '@/app';
 import { env } from '@/utils/env';
+import { logger } from './utils/logger';
 
 async function main() {
-  app.listen({ port: env.PORT }, () => console.log('aoba'));
+  const address = await app.listen({ port: env.PORT });
+
+  logger.info(`Server is running 🚀`);
+  logger.info(`link: ${address}`);
 }
 
 main();
