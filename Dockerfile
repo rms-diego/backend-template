@@ -4,8 +4,6 @@ COPY . .
 
 RUN npm ci
 
-RUN npm run lint
-
 RUN npm run build
 
 ENTRYPOINT [ "npm", "start" ]
