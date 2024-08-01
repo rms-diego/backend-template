@@ -32,7 +32,7 @@ const logger = winston.createLogger({
       format: consoleFormat,
     }),
     new winston.transports.File({
-      filename: 'log/local.log',
+      filename: 'local.log',
       level: 'error',
       format: fileFormat,
     }),
