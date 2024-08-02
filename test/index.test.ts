@@ -1,11 +1,11 @@
-import { describe, test, beforeEach, expect } from "vitest";
+import { describe, test, expect, beforeAll } from "vitest";
 import supertest from "supertest";
 import { app } from "@/app";
 
 describe("GET / - Health check test cases", () => {
   const request = supertest(app.server);
 
-  beforeEach(async () => {
+  beforeAll(async () => {
     app.ready();
   });
 
